@@ -1,0 +1,440 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container .mobilelogo{
+    display: none;
+}
+
+/**Content**/
+.container .banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container .banner .leftcolumn{
+    flex-basis: 60%;
+    height: 100%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    padding: 0 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container .banner .leftcolumn .desktoplogo{
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    width: 450px;
+}
+
+.container .banner .leftcolumn .content{
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.container .banner .leftcolumn .content h1{
+    text-transform: uppercase;
+    font-size: 200px;
+    letter-spacing: 50px;
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+.container .banner .leftcolumn .content h1 span{
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.container .banner .leftcolumn .content p{
+    font-size: 58px;
+    margin: 40px 0 100px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 100;
+}
+
+.container .banner .leftcolumn .content form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 70px;
+}
+
+.container .banner .leftcolumn .content form input{
+    flex: 1;
+    padding: 30px 40px;
+    font-size: 40px;
+    color: hsl(0, 6%, 24%);
+    background: transparent;
+    border: 0;
+}
+
+.container .banner .leftcolumn .content form input::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+.container .banner .leftcolumn .content form button{
+    padding: 40px 100px;
+    border: 0;
+    border-radius: 70px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 20px 45px 15px hsl(0, 36%, 70%);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container .banner .leftcolumn .content form button:hover{
+    background: hsl(0, 80%, 86%);
+}
+
+.container .banner .leftcolumn .content form button img{
+    width: 30px;
+}
+
+.container .banner .rightcolumn{
+    flex-basis: 40%;
+    height: 100%;
+    background-image: url(images/hero-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/**Footer**/
+.container .attribution{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.container .attribution p{
+    font-size: 40px;
+}
+
+.container .attribution p a{
+    text-decoration: none;
+    color: hsl(0, 6%, 24%);
+}
+
+@media only screen and (max-width: 768px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container .mobilelogo{
+        display: block;
+        width: 350px;
+        padding: 5% 10%;
+        z-index: 2;
+    }
+
+    .container .banner{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container .banner .leftcolumn .desktoplogo{
+        display: none;
+    }
+
+    .container .banner .rightcolumn{
+        flex-basis: 100%;
+        order: 1;
+        background-image: url(images/hero-mobile.jpg);
+        background-position: center;
+        background-size: 768px;
+        height: 40%;
+    }
+
+    .container .banner .leftcolumn{
+        flex-basis: 100%;
+        order: 2;
+        height: 60%;
+        background: hsl(0, 100%, 98%);
+    }
+
+    .container .banner .leftcolumn .content{
+        width: 100%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container .banner .leftcolumn .content h1{
+        font-size: 70px;
+        letter-spacing: 10px;
+        margin-top: 20px;
+    }
+    
+    .container .banner .leftcolumn .content p{
+        font-size: 30px;
+        margin: 20px 0 30px;
+    }
+
+    .container .banner .leftcolumn .content form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .container .banner .leftcolumn .content form input{
+        padding: 20px 20px;
+        font-size: 25px;
+    }
+    
+    .container .banner .leftcolumn .content form button{
+        padding: 20px 40px;
+        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
+    }
+    
+    .container .banner .leftcolumn .content form button img{
+        width: 20px;
+    }
+
+    .container .attribution p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    .container .mobilelogo{
+        display: block;
+        width: 200px;
+        padding: 5% 10%;
+        z-index: 2;
+    }
+
+    .container .banner{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container .banner .leftcolumn .desktoplogo{
+        display: none;
+    }
+
+    .container .banner .rightcolumn{
+        flex-basis: 100%;
+        order: 1;
+        background-image: url(images/hero-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 40%;
+
+    }
+
+    .container .banner .leftcolumn{
+        flex-basis: 100%;
+        order: 2;
+        height: 60%;
+        background: hsl(0, 100%, 98%);
+    }
+
+    .container .banner .leftcolumn .content{
+        width: 100%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container .banner .leftcolumn .content h1{
+        font-size: 35px;
+        letter-spacing: 10px;
+    }
+    
+    .container .banner .leftcolumn .content p{
+        font-size: 16px;
+        margin: 20px 0 40px;
+    }
+
+    .container .banner .leftcolumn .content form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .container .banner .leftcolumn .content form input{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .container .banner .leftcolumn .content form button{
+        padding: 10px 30px;
+        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
+    }
+    
+    .container .banner .leftcolumn .content form button img{
+        width: 10px;
+    }
+
+    .container .attribution p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .container .mobilelogo{
+        display: block;
+        width: 170px;
+        padding: 5% 10%;
+        z-index: 2;
+    }
+
+    .container .banner{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container .banner .leftcolumn .desktoplogo{
+        display: none;
+    }
+
+    .container .banner .rightcolumn{
+        flex-basis: 100%;
+        order: 1;
+        background-image: url(images/hero-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .container .banner .leftcolumn{
+        flex-basis: 100%;
+        order: 2;
+        height: 60%;
+        background: hsl(0, 100%, 98%);
+    }
+
+    .container .banner .leftcolumn .content{
+        width: 100%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container .banner .leftcolumn .content h1{
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+    
+    .container .banner .leftcolumn .content p{
+        font-size: 15px;
+        margin: 15px 0 25px;
+    }
+
+    .container .banner .leftcolumn .content form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .container .banner .leftcolumn .content form input{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .container .banner .leftcolumn .content form button{
+        padding: 10px 30px;
+        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
+    }
+    
+    .container .banner .leftcolumn .content form button img{
+        width: 10px;
+    }
+
+    .container .attribution p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .container .mobilelogo{
+        display: block;
+        width: 150px;
+        padding: 5% 10%;
+        z-index: 2;
+    }
+
+    .container .banner{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container .banner .leftcolumn .desktoplogo{
+        display: none;
+    }
+
+    .container .banner .rightcolumn{
+        flex-basis: 100%;
+        order: 1;
+        background-image: url(images/hero-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .container .banner .leftcolumn{
+        flex-basis: 100%;
+        order: 2;
+        height: 60%;
+        background: hsl(0, 100%, 98%);
+    }
+
+    .container .banner .leftcolumn .content{
+        width: 100%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container .banner .leftcolumn .content h1{
+        font-size: 35px;
+        letter-spacing: 10px;
+    }
+    
+    .container .banner .leftcolumn .content p{
+        font-size: 13px;
+        margin: 15px 0 25px;
+    }
+
+    .container .banner .leftcolumn .content form{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .container .banner .leftcolumn .content form input{
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .container .banner .leftcolumn .content form button{
+        padding: 10px 30px;
+        box-shadow: 0 7px 15px 5px hsl(0, 36%, 70%);
+    }
+    
+    .container .banner .leftcolumn .content form button img{
+        width: 10px;
+    }
+
+    .container .attribution p{
+        font-size: 12px;
+    }
+}
