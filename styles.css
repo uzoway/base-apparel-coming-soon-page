@@ -41,7 +41,7 @@
     position: absolute;
     top: 5%;
     left: 17%;
-    width: 450px;
+    width: 250px;
 }
 
 .container .banner .leftcolumn .content{
@@ -51,7 +51,7 @@
 
 .container .banner .leftcolumn .content h1{
     text-transform: uppercase;
-    font-size: 200px;
+    font-size: 100px;
     letter-spacing: 50px;
     font-weight: 600;
     color: hsl(0, 6%, 24%);
@@ -63,7 +63,7 @@
 }
 
 .container .banner .leftcolumn .content p{
-    font-size: 58px;
+    font-size: 38px;
     margin: 40px 0 100px;
     color: hsl(0, 36%, 70%);
     font-weight: 100;
@@ -79,7 +79,7 @@
 
 .container .banner .leftcolumn .content form input{
     flex: 1;
-    padding: 30px 40px;
+    padding: 20px 40px;
     font-size: 40px;
     color: hsl(0, 6%, 24%);
     background: transparent;
@@ -105,7 +105,7 @@
 }
 
 .container .banner .leftcolumn .content form button img{
-    width: 30px;
+    width: 20px;
 }
 
 .container .banner .rightcolumn{
