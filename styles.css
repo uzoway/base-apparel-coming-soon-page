@@ -1,114 +1,116 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-size: 15px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.container{
+section{
     width: 100%;
     height: 100vh;
     position: relative;
-}
-
-.container .mobilelogo{
-    display: none;
-}
-
-/**Content**/
-.container .banner{
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: relative;
 }
 
-.container .banner .leftcolumn{
+section .moblogo{
+    display: none;
+}
+
+section .leftcolumn{
+    position: relative;
     flex-basis: 60%;
     height: 100%;
     background-image: url(images/bg-pattern-desktop.svg);
+    background-position: center;
     background-size: cover;
-    padding: 0 10%;
-    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.container .banner .leftcolumn .desktoplogo{
+section .logo{
     position: absolute;
-    top: 5%;
-    left: 17%;
-    width: 250px;
+    top: 3rem;
+    left: 12rem;
+    width: 8rem;
+    z-index: 2;
 }
 
-.container .banner .leftcolumn .content{
-    width: 90%;
-    box-sizing: border-box;
+section .leftcolumn .contentbox{
+    width: 50%;
+    position: relative;
+    margin-left: -3rem;
 }
 
-.container .banner .leftcolumn .content h1{
+section .leftcolumn .contentbox h1{
+    font-size: 4rem;
     text-transform: uppercase;
-    font-size: 100px;
-    letter-spacing: 50px;
     font-weight: 600;
-    color: hsl(0, 6%, 24%);
+    letter-spacing: 1rem;
+    color: hsl(0, 6%, 24%) ;
 }
 
-.container .banner .leftcolumn .content h1 span{
+section .leftcolumn .contentbox h1 span{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: hsl(0, 36%, 70%);
     font-weight: 300;
-    color: hsl(0, 36%, 70%);
+    letter-spacing: 1rem;
 }
 
-.container .banner .leftcolumn .content p{
-    font-size: 38px;
-    margin: 40px 0 100px;
+section .leftcolumn .contentbox p{
+    font-size: 1rem;
     color: hsl(0, 36%, 70%);
-    font-weight: 100;
+    font-weight: 300;
+    padding: 1rem 0 2rem;
+    font-weight: 400;
 }
 
-.container .banner .leftcolumn .content form{
-    width: 100%;
+section .leftcolumn .contentbox .inputfield{
     display: flex;
     align-items: center;
-    border: 1px solid hsl(0, 36%, 70%);
-    border-radius: 70px;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid hsl(0, 6%, 24%);
+    position: relative;
 }
 
-.container .banner .leftcolumn .content form input{
-    flex: 1;
-    padding: 20px 40px;
-    font-size: 40px;
-    color: hsl(0, 6%, 24%);
+section .leftcolumn .contentbox .inputfield input{
     background: transparent;
-    border: 0;
+    border: none;
+    color: hsl(0, 36%, 70%);
+    
 }
 
-.container .banner .leftcolumn .content form input::placeholder{
+section .leftcolumn .contentbox .inputfield input::placeholder{
     color: hsl(0, 36%, 70%);
 }
 
-.container .banner .leftcolumn .content form button{
-    padding: 40px 100px;
-    border: 0;
-    border-radius: 70px;
+section .leftcolumn .contentbox .inputfield button{
+    display: flex;
+    align-items: center;
+    padding: 1.05rem 2.5rem;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    border-radius: 2rem;
+    border: none;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    box-shadow: 0 20px 45px 15px hsl(0, 36%, 70%);
-    cursor: pointer;
+    box-shadow: 0 1rem 1rem .5rem rgba(0, 0, 0, 0.055);
     transition: .5s;
 }
 
-.container .banner .leftcolumn .content form button:hover{
-    background: hsl(0, 80%, 86%);
+section .leftcolumn .contentbox .inputfield button img{
+    width: .6rem;
 }
 
-.container .banner .leftcolumn .content form button img{
-    width: 20px;
-}
-
-.container .banner .rightcolumn{
+section .rightcolumn{
+    position: relative;
     flex-basis: 40%;
     height: 100%;
     background-image: url(images/hero-desktop.jpg);
@@ -116,325 +118,103 @@
     background-size: cover;
 }
 
-/**Footer**/
-.container .attribution{
-    width: 100%;
-    position: relative;
-    text-align: center;
+section .attribution{
+    position: absolute;
+    bottom: 2rem;
+    left: 12rem;
 }
 
-.container .attribution p{
-    font-size: 40px;
+section .attribution p{
+    font-size: .8rem;
+    font-weight: 300;
 }
 
-.container .attribution p a{
+section .leftcolumn .contentbox .inputfield button:hover{
+    box-shadow: 0 1rem 1rem .5rem rgba(0, 0, 0, 0.13);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 80%, 86%));
+}
+
+section .attribution p a{
     text-decoration: none;
-    color: hsl(0, 6%, 24%);
-}
+    color: hsl(0, 36%, 70%);
+    font-size: 1rem;
+}   
 
-@media only screen and (max-width: 768px){
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Josefin Sans', sans-serif;
-    }
-
-    .container .mobilelogo{
-        display: block;
-        width: 350px;
-        padding: 5% 10%;
-        z-index: 2;
-    }
-
-    .container .banner{
+@media (max-width: 991px){
+    section {
         width: 100%;
-        box-sizing: border-box;
-    }
-
-    .container .banner .leftcolumn .desktoplogo{
-        display: none;
-    }
-
-    .container .banner .rightcolumn{
-        flex-basis: 100%;
-        order: 1;
-        background-image: url(images/hero-mobile.jpg);
-        background-position: center;
-        background-size: 768px;
-        height: 40%;
-    }
-
-    .container .banner .leftcolumn{
-        flex-basis: 100%;
-        order: 2;
-        height: 60%;
-        background: hsl(0, 100%, 98%);
-    }
-
-    .container .banner .leftcolumn .content{
-        width: 100%;
-        margin: auto;
+        height: 100vh;
         position: relative;
-        text-align: center;
-    }
-    
-    .container .banner .leftcolumn .content h1{
-        font-size: 70px;
-        letter-spacing: 10px;
-        margin-top: 20px;
-    }
-    
-    .container .banner .leftcolumn .content p{
-        font-size: 30px;
-        margin: 20px 0 30px;
-    }
-
-    .container .banner .leftcolumn .content form{
-        width: 100%;
         display: flex;
         align-items: center;
-    }
-    
-    .container .banner .leftcolumn .content form input{
-        padding: 20px 20px;
-        font-size: 25px;
-    }
-    
-    .container .banner .leftcolumn .content form button{
-        padding: 20px 40px;
-        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
-    }
-    
-    .container .banner .leftcolumn .content form button img{
-        width: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    .container .attribution p{
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 414px){
-    .container .mobilelogo{
-        display: block;
-        width: 200px;
-        padding: 5% 10%;
-        z-index: 2;
+    section .logo {
+       display: none;
     }
 
-    .container .banner{
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .container .banner .leftcolumn .desktoplogo{
-        display: none;
-    }
-
-    .container .banner .rightcolumn{
+    section .moblogo{
+        display: flex;
+        align-items: center;
+        height: 10vh;
         flex-basis: 100%;
-        order: 1;
+        background: hsla(0, 80%, 86%, 0.089);
+    }
+
+    section .moblogo img{
+        transform: scale(0.6);
+        
+    }
+    section .rightcolumn {
+        flex-basis: 100%;
+        height: 35vh;
         background-image: url(images/hero-mobile.jpg);
         background-position: center;
         background-size: cover;
-        height: 40%;
-
-    }
-
-    .container .banner .leftcolumn{
-        flex-basis: 100%;
         order: 2;
-        height: 60%;
-        background: hsl(0, 100%, 98%);
     }
 
-    .container .banner .leftcolumn .content{
-        width: 100%;
-        margin: auto;
+    section .leftcolumn {
         position: relative;
+        flex-basis: 100%;
+        height: 55vh;
+        order: 3;
+        background: hsla(0, 80%, 86%, 0.192);
+    }
+
+    section .leftcolumn .contentbox {
+        width: 80%;
+        position: relative;
+        margin-left: 0rem;
         text-align: center;
     }
-    
-    .container .banner .leftcolumn .content h1{
-        font-size: 35px;
-        letter-spacing: 10px;
-    }
-    
-    .container .banner .leftcolumn .content p{
-        font-size: 16px;
-        margin: 20px 0 40px;
+
+    section .leftcolumn .contentbox h1 {
+        font-size: 2rem;
     }
 
-    .container .banner .leftcolumn .content form{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-    
-    .container .banner .leftcolumn .content form input{
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-    
-    .container .banner .leftcolumn .content form button{
-        padding: 10px 30px;
-        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
-    }
-    
-    .container .banner .leftcolumn .content form button img{
-        width: 10px;
+    section .leftcolumn .contentbox h1 span {
+        font-size: 2rem;
     }
 
-    .container .attribution p{
-        font-size: 12px;
+    section .leftcolumn .contentbox p {
+        font-size: .9rem;
+    }
+
+    section .leftcolumn .contentbox .inputfield button {
+        padding: 1.05rem 1.8rem;
+    }
+
+    section .attribution {
+        position: absolute;
+        bottom: .5rem;
+        left: 12rem;
+        transform: translateX(-50%);
     }
 }
 
-@media only screen and (max-width: 375px){
-    .container .mobilelogo{
-        display: block;
-        width: 170px;
-        padding: 5% 10%;
-        z-index: 2;
-    }
 
-    .container .banner{
-        width: 100%;
-        box-sizing: border-box;
-    }
 
-    .container .banner .leftcolumn .desktoplogo{
-        display: none;
-    }
 
-    .container .banner .rightcolumn{
-        flex-basis: 100%;
-        order: 1;
-        background-image: url(images/hero-mobile.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .container .banner .leftcolumn{
-        flex-basis: 100%;
-        order: 2;
-        height: 60%;
-        background: hsl(0, 100%, 98%);
-    }
-
-    .container .banner .leftcolumn .content{
-        width: 100%;
-        margin: auto;
-        position: relative;
-        text-align: center;
-    }
-    
-    .container .banner .leftcolumn .content h1{
-        font-size: 40px;
-        letter-spacing: 10px;
-    }
-    
-    .container .banner .leftcolumn .content p{
-        font-size: 15px;
-        margin: 15px 0 25px;
-    }
-
-    .container .banner .leftcolumn .content form{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-    
-    .container .banner .leftcolumn .content form input{
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-    
-    .container .banner .leftcolumn .content form button{
-        padding: 10px 30px;
-        box-shadow: 0 10px 25px 5px hsl(0, 36%, 70%);
-    }
-    
-    .container .banner .leftcolumn .content form button img{
-        width: 10px;
-    }
-
-    .container .attribution p{
-        font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 320px){
-    .container .mobilelogo{
-        display: block;
-        width: 150px;
-        padding: 5% 10%;
-        z-index: 2;
-    }
-
-    .container .banner{
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .container .banner .leftcolumn .desktoplogo{
-        display: none;
-    }
-
-    .container .banner .rightcolumn{
-        flex-basis: 100%;
-        order: 1;
-        background-image: url(images/hero-mobile.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .container .banner .leftcolumn{
-        flex-basis: 100%;
-        order: 2;
-        height: 60%;
-        background: hsl(0, 100%, 98%);
-    }
-
-    .container .banner .leftcolumn .content{
-        width: 100%;
-        margin: auto;
-        position: relative;
-        text-align: center;
-    }
-    
-    .container .banner .leftcolumn .content h1{
-        font-size: 35px;
-        letter-spacing: 10px;
-    }
-    
-    .container .banner .leftcolumn .content p{
-        font-size: 13px;
-        margin: 15px 0 25px;
-    }
-
-    .container .banner .leftcolumn .content form{
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-    
-    .container .banner .leftcolumn .content form input{
-        padding: 10px 20px;
-        font-size: 12px;
-    }
-    
-    .container .banner .leftcolumn .content form button{
-        padding: 10px 30px;
-        box-shadow: 0 7px 15px 5px hsl(0, 36%, 70%);
-    }
-    
-    .container .banner .leftcolumn .content form button img{
-        width: 10px;
-    }
-
-    .container .attribution p{
-        font-size: 12px;
-    }
-}
