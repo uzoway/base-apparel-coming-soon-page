@@ -12,5 +12,6 @@ I also used this project to improve my skills in a real-life workflow.
 
 **It was a wonderful challenge overall.**
 
-Live URL 
+Live URL: https://base-apparel-coming-soon-page-liard-nine.vercel.app/
+
 🚀
